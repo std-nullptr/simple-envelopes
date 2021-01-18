@@ -1,0 +1,52 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">Simple Envelopes</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="fas fa-eye fa-lg fa-fw"></span>&nbsp;&nbsp;Overview
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="fundingschedules">
+                <span class="fas fa-money-check fa-lg fa-fw"></span>&nbsp;&nbsp;Funding Schedules
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="expenses">
+                <span class="fas fa-file-invoice-dollar fa-lg fa-fw"></span>&nbsp;&nbsp;Expenses
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="goals">
+                <span class="fas fa-piggy-bank fa-lg fa-fw"></span>&nbsp;&nbsp;Goals
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="accounts">
+                <span class="fas fa-university fa-lg fa-fw"></span>&nbsp;&nbsp;Accounts
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="settings">
+                <span class="fas fa-cogs fa-lg fa-fw"></span>&nbsp;&nbsp;Settings
+            </NavLink>
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
