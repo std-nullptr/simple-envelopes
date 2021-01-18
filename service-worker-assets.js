@@ -6821,10 +6821,6 @@
       "url": "css\/font-awesome\/webfonts\/fa-solid-900.woff2"
     },
     {
-      "hash": "sha256-\/C4CWGgNbYKCjbh9tLfmaWR5CsSofwSJ41hqF2hmC5E=",
-      "url": "decode.js"
-    },
-    {
       "hash": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
       "url": "favicon.ico"
     },
@@ -6833,7 +6829,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-6N0turMdgzF19AQiIQC+cg3dPPp7Bdioe1zvxW25W3Y=",
+      "hash": "sha256-Fng0GwJD1nybmVGxS7baOibcA2D0Mi+E1GyMpqDKffQ=",
       "url": "index.html"
     },
     {
@@ -7013,5 +7009,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "L4iUjPrj"
+  "version": "ZIahE2x6"
 };

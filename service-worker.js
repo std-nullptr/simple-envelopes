@@ -5,6 +5,7 @@ self.importScripts('./service-worker-assets.js');
 self.addEventListener('install', event => event.waitUntil(onInstall(event)));
 self.addEventListener('activate', event => event.waitUntil(onActivate(event)));
 self.addEventListener('fetch', event => event.respondWith(onFetch(event)));
+self.addEventListener('updatefound', event => event.respondWith(onUpdateFound(event)));
 
 const cacheNamePrefix = 'offline-cache-';
 const cacheName = `${cacheNamePrefix}${self.assetsManifest.version}`;
@@ -46,4 +47,8 @@ async function onFetch(event) {
 
     return cachedResponse || fetch(event.request);
 }
-/* Manifest version: L4iUjPrj */
+
+async function onUpdateFound(event) {
+    console.info('Service worker: Update Found');
+}
+/* Manifest version: ZIahE2x6 */
