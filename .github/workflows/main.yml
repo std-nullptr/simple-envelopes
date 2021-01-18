@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  deploy_to-github-pages:
+  Deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,6 +19,12 @@ jobs:
       - name: Publish .NET Core Project
         run: dotnet publish -c Release --nologo
       
+      - name: Copy index.html to 404.html
+        run: cp bin/Release/net5.0/publish/wwwroot/index.html bin/Release/net5.0/publish/wwwroot/404.html
+      
+      - name: Create .nojekyll
+        run: touch bin/Release/net5.0/publish/wwwroot/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
