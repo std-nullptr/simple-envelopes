@@ -51,4 +51,4 @@ async function onFetch(event) {
 async function onUpdateFound(event) {
     console.info('Service worker: Update Found!');
 }
-/* Manifest version: ZIahE2x6 */
+/* Manifest version: zz8v/Hpz */
